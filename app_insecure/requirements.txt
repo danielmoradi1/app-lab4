@@ -1,0 +1,6 @@
+Flask>=2.0
+requests
+gunicorn
+bleach
+bandit
+semgrep

@@ -1,0 +1,6 @@
+venv/
+*.sqlite3
+app_insecure/data/
+app_secure/data/
+__pycache__/
+.env
