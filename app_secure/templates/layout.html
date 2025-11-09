@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <title>App Lab4 - Secure</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body { font-family: Arial, sans-serif; margin: 2rem; }
+    header { margin-bottom: 1rem; }
+    .box { border: 1px solid #ccc; padding: 1rem; border-radius: 6px; margin-bottom: 1rem; }
+    .danger { color: #b00; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>App Lab4 — <small>Secure</small></h1>
+    <nav>
+      <a href="{{ url_for('products') }}">Products</a> |
+      <a href="{{ url_for('login') }}">Login</a> |
+      <a href="{{ url_for('diag') }}">Diagnostics</a>
+    </nav>
+    <hr>
+  </header>
+
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+</body>
+</html>

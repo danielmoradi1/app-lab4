@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block content %}
+  <div class="box">
+    <h2>Products</h2>
+    <form method="get" action="{{ url_for('products') }}">
+      <label>Search: <input name="q" value="{{ request.args.get('q','') }}" /></label>
+      <button type="submit">search</button>
+    </form>
+
+    <p>Reflected query: <span class="danger">{{ query | e }}</span></p>
+    
+    <ul>
+      {% for p in products %}
+        <li><a href="{{ url_for('product', pid=p['id']) }}">{{ p['name'] }}</a> — {{ p['description'] }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+{% endblock %}

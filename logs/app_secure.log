@@ -1,0 +1,147 @@
+2025-11-09 19:21:04,244 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-11-09 19:21:04,244 INFO [33mPress CTRL+C to quit[0m
+2025-11-09 19:21:21,515 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.64.5:5001
+2025-11-09 19:21:21,517 INFO [33mPress CTRL+C to quit[0m
+2025-11-09 19:21:21,519 INFO  * Restarting with stat
+2025-11-09 19:21:21,673 WARNING  * Debugger is active!
+2025-11-09 19:21:21,684 INFO  * Debugger PIN: 811-539-991
+2025-11-09 19:21:53,559 INFO 127.0.0.1 - - [09/Nov/2025 19:21:53] "GET /products HTTP/1.1" 200 -
+2025-11-09 19:21:53,714 INFO 127.0.0.1 - - [09/Nov/2025 19:21:53] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-11-09 19:21:56,880 INFO 127.0.0.1 - - [09/Nov/2025 19:21:56] "GET /login HTTP/1.1" 200 -
+2025-11-09 19:21:57,656 INFO DIAG_REQUEST host=127.0.0.1
+2025-11-09 19:21:57,683 INFO 127.0.0.1 - - [09/Nov/2025 19:21:57] "GET /diag HTTP/1.1" 200 -
+2025-11-09 19:21:58,657 INFO 127.0.0.1 - - [09/Nov/2025 19:21:58] "GET /products HTTP/1.1" 200 -
+2025-11-09 19:21:59,302 INFO DIAG_REQUEST host=127.0.0.1
+2025-11-09 19:21:59,307 INFO 127.0.0.1 - - [09/Nov/2025 19:21:59] "GET /diag HTTP/1.1" 200 -
+2025-11-09 19:22:01,519 INFO DIAG_REQUEST host=127.0.0.1
+2025-11-09 19:22:01,542 INFO 127.0.0.1 - - [09/Nov/2025 19:22:01] "GET /diag?host=127.0.0.1 HTTP/1.1" 200 -
+2025-11-09 19:22:02,367 INFO DIAG_REQUEST host=127.0.0.1
+2025-11-09 19:22:02,374 INFO 127.0.0.1 - - [09/Nov/2025 19:22:02] "GET /diag?host=127.0.0.1 HTTP/1.1" 200 -
+2025-11-09 19:22:02,994 INFO DIAG_REQUEST host=127.0.0.1
+2025-11-09 19:22:02,999 INFO 127.0.0.1 - - [09/Nov/2025 19:22:02] "GET /diag?host=127.0.0.1 HTTP/1.1" 200 -
+2025-11-09 19:22:07,089 INFO DIAG_REQUEST host=127.0.0.1; uname -a
+2025-11-09 19:22:07,095 INFO 127.0.0.1 - - [09/Nov/2025 19:22:07] "GET /diag?host=127.0.0.1;+uname+-a HTTP/1.1" 200 -
+2025-11-09 19:22:14,271 INFO 127.0.0.1 - - [09/Nov/2025 19:22:14] "GET /login HTTP/1.1" 200 -
+2025-11-09 19:22:43,249 INFO LOGIN_ATTEMPT username=admin' --
+2025-11-09 19:22:43,252 INFO LOGIN_FAILED username=admin' --
+2025-11-09 19:22:43,254 INFO 127.0.0.1 - - [09/Nov/2025 19:22:43] "POST /login HTTP/1.1" 200 -
+2025-11-09 19:23:13,846 INFO  * Detected change in '/home/ramor/Desktop/app-lab4/app_secure/app.py', reloading
+2025-11-09 19:23:14,086 INFO  * Restarting with stat
+2025-11-09 19:23:14,472 WARNING  * Debugger is active!
+2025-11-09 19:23:14,483 INFO  * Debugger PIN: 811-539-991
+2025-11-09 19:23:23,555 INFO  * Detected change in '/home/ramor/Desktop/app-lab4/app_secure/app.py', reloading
+2025-11-09 19:23:23,620 INFO  * Restarting with stat
+2025-11-09 19:23:23,761 WARNING  * Debugger is active!
+2025-11-09 19:23:23,766 INFO  * Debugger PIN: 811-539-991
+2025-11-09 19:26:03,924 INFO LOGIN_ATTEMPT username=admin' --
+2025-11-09 19:26:03,928 INFO LOGIN_FAILED username=admin' --
+2025-11-09 19:26:03,942 INFO 127.0.0.1 - - [09/Nov/2025 19:26:03] "POST /login HTTP/1.1" 200 -
+2025-11-09 19:26:04,117 INFO 127.0.0.1 - - [09/Nov/2025 19:26:04] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-11-09 19:26:33,169 INFO 127.0.0.1 - - [09/Nov/2025 19:26:33] "GET /login HTTP/1.1" 200 -
+2025-11-09 19:50:58,570 INFO 127.0.0.1 - - [09/Nov/2025 19:50:58] "GET /login HTTP/1.1" 200 -
+2025-11-09 19:50:59,417 INFO 127.0.0.1 - - [09/Nov/2025 19:50:59] "GET /login HTTP/1.1" 200 -
+2025-11-09 19:51:07,753 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.64.5:5001
+2025-11-09 19:51:07,753 INFO [33mPress CTRL+C to quit[0m
+2025-11-09 19:51:07,753 INFO  * Restarting with stat
+2025-11-09 19:51:07,898 WARNING  * Debugger is active!
+2025-11-09 19:51:07,908 INFO  * Debugger PIN: 811-539-991
+2025-11-09 19:51:09,381 INFO 127.0.0.1 - - [09/Nov/2025 19:51:09] "GET /login HTTP/1.1" 200 -
+2025-11-09 19:51:26,773 INFO 127.0.0.1 - - [09/Nov/2025 19:51:26] "GET /login HTTP/1.1" 200 -
+2025-11-09 19:54:11,894 INFO LOGIN_ATTEMPT username=admin' --
+2025-11-09 19:54:11,897 INFO LOGIN_FAILED username=admin' --
+2025-11-09 19:54:11,905 INFO 127.0.0.1 - - [09/Nov/2025 19:54:11] "POST /login HTTP/1.1" 200 -
+2025-11-09 19:54:12,028 INFO 127.0.0.1 - - [09/Nov/2025 19:54:12] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-11-09 19:56:37,942 INFO 127.0.0.1 - - [09/Nov/2025 19:56:37] "GET /products?q=<script>alert('XSS')</script> HTTP/1.1" 200 -
+2025-11-09 19:57:25,846 INFO 127.0.0.1 - - [09/Nov/2025 19:57:25] "GET /products HTTP/1.1" 200 -
+2025-11-09 19:57:27,691 INFO 127.0.0.1 - - [09/Nov/2025 19:57:27] "GET /products?q= HTTP/1.1" 200 -
+2025-11-09 19:57:41,342 INFO 127.0.0.1 - - [09/Nov/2025 19:57:41] "GET /product/1 HTTP/1.1" 200 -
+2025-11-09 19:57:41,462 INFO 127.0.0.1 - - [09/Nov/2025 19:57:41] "GET /comments_iframe?product=1 HTTP/1.1" 200 -
+2025-11-09 19:57:48,624 INFO 127.0.0.1 - - [09/Nov/2025 19:57:48] "GET /products?q=<script>alert('stored')</script> HTTP/1.1" 200 -
+2025-11-09 19:57:51,755 INFO 127.0.0.1 - - [09/Nov/2025 19:57:51] "GET /products?q=<script>alert('stored')</script> HTTP/1.1" 200 -
+2025-11-09 19:58:11,404 INFO 127.0.0.1 - - [09/Nov/2025 19:58:11] "GET /products?<script>alert('stored')</script> HTTP/1.1" 200 -
+2025-11-09 19:58:14,866 INFO 127.0.0.1 - - [09/Nov/2025 19:58:14] "GET /products?q= HTTP/1.1" 200 -
+2025-11-09 19:58:16,693 INFO 127.0.0.1 - - [09/Nov/2025 19:58:16] "GET /products HTTP/1.1" 200 -
+2025-11-09 19:58:17,452 INFO 127.0.0.1 - - [09/Nov/2025 19:58:17] "GET /login HTTP/1.1" 200 -
+2025-11-09 19:58:18,363 INFO DIAG_REQUEST host=127.0.0.1
+2025-11-09 19:58:18,391 INFO 127.0.0.1 - - [09/Nov/2025 19:58:18] "GET /diag HTTP/1.1" 200 -
+2025-11-09 19:58:21,362 INFO DIAG_REQUEST host=127.0.0.1
+2025-11-09 19:58:21,380 INFO 127.0.0.1 - - [09/Nov/2025 19:58:21] "GET /diag?host=127.0.0.1 HTTP/1.1" 200 -
+2025-11-09 19:58:22,686 INFO 127.0.0.1 - - [09/Nov/2025 19:58:22] "GET /products HTTP/1.1" 200 -
+2025-11-09 19:58:23,651 INFO 127.0.0.1 - - [09/Nov/2025 19:58:23] "GET /products?q= HTTP/1.1" 200 -
+2025-11-09 19:58:24,570 INFO DIAG_REQUEST host=127.0.0.1
+2025-11-09 19:58:24,583 INFO 127.0.0.1 - - [09/Nov/2025 19:58:24] "GET /diag HTTP/1.1" 200 -
+2025-11-09 19:58:25,348 INFO DIAG_REQUEST host=127.0.0.1
+2025-11-09 19:58:25,354 INFO 127.0.0.1 - - [09/Nov/2025 19:58:25] "GET /diag?host=127.0.0.1 HTTP/1.1" 200 -
+2025-11-09 19:58:25,928 INFO DIAG_REQUEST host=127.0.0.1
+2025-11-09 19:58:25,932 INFO 127.0.0.1 - - [09/Nov/2025 19:58:25] "GET /diag?host=127.0.0.1 HTTP/1.1" 200 -
+2025-11-09 19:58:26,168 INFO DIAG_REQUEST host=127.0.0.1
+2025-11-09 19:58:26,171 INFO 127.0.0.1 - - [09/Nov/2025 19:58:26] "GET /diag?host=127.0.0.1 HTTP/1.1" 200 -
+2025-11-09 19:58:26,591 INFO DIAG_REQUEST host=127.0.0.1
+2025-11-09 19:58:26,594 INFO 127.0.0.1 - - [09/Nov/2025 19:58:26] "GET /diag?host=127.0.0.1 HTTP/1.1" 200 -
+2025-11-09 19:58:26,831 INFO DIAG_REQUEST host=127.0.0.1
+2025-11-09 19:58:26,834 INFO 127.0.0.1 - - [09/Nov/2025 19:58:26] "GET /diag?host=127.0.0.1 HTTP/1.1" 200 -
+2025-11-09 19:58:29,028 INFO DIAG_REQUEST host=127.0.0.1; uname -a
+2025-11-09 19:58:29,029 INFO 127.0.0.1 - - [09/Nov/2025 19:58:29] "GET /diag?host=127.0.0.1;+uname+-a HTTP/1.1" 200 -
+2025-11-09 19:58:33,176 INFO DIAG_REQUEST host=127.0.0.1; uname -a
+2025-11-09 19:58:33,186 INFO 127.0.0.1 - - [09/Nov/2025 19:58:33] "GET /diag?host=127.0.0.1;+uname+-a HTTP/1.1" 200 -
+2025-11-09 19:58:34,375 INFO DIAG_REQUEST host=
+2025-11-09 19:58:34,377 INFO 127.0.0.1 - - [09/Nov/2025 19:58:34] "GET /diag?host= HTTP/1.1" 200 -
+2025-11-09 19:58:36,059 INFO 127.0.0.1 - - [09/Nov/2025 19:58:36] "GET /login HTTP/1.1" 200 -
+2025-11-09 20:00:25,843 INFO 127.0.0.1 - - [09/Nov/2025 20:00:25] "GET /products HTTP/1.1" 200 -
+2025-11-09 20:00:28,799 INFO 127.0.0.1 - - [09/Nov/2025 20:00:28] "GET /products?q=grep+-n+"<script"+artifacts/xss_reflected_secure.html+||+echo+"No+script+tag+found" HTTP/1.1" 200 -
+2025-11-09 20:00:31,822 INFO 127.0.0.1 - - [09/Nov/2025 20:00:31] "GET /products?q=grep+-n+"<script"+artifacts/xss_reflected_secure.html+||+echo+"No+script+tag+found" HTTP/1.1" 200 -
+2025-11-09 20:00:33,610 INFO 127.0.0.1 - - [09/Nov/2025 20:00:33] "GET /products?q=grep+-n+"<script"+artifacts/xss_reflected_secure.html+||+echo+"No+script+tag+found" HTTP/1.1" 200 -
+2025-11-09 20:00:35,402 INFO 127.0.0.1 - - [09/Nov/2025 20:00:35] "GET /login HTTP/1.1" 200 -
+2025-11-09 20:01:58,947 INFO 127.0.0.1 - - [09/Nov/2025 20:01:58] "GET /login HTTP/1.1" 200 -
+2025-11-09 20:02:25,772 INFO 127.0.0.1 - - [09/Nov/2025 20:02:25] "GET /products HTTP/1.1" 200 -
+2025-11-09 20:03:31,170 INFO 127.0.0.1 - - [09/Nov/2025 20:03:31] "GET /products HTTP/1.1" 200 -
+2025-11-09 20:03:33,591 INFO 127.0.0.1 - - [09/Nov/2025 20:03:33] "GET /product/1 HTTP/1.1" 200 -
+2025-11-09 20:03:33,658 INFO 127.0.0.1 - - [09/Nov/2025 20:03:33] "GET /comments_iframe?product=1 HTTP/1.1" 200 -
+2025-11-09 20:03:42,206 INFO 127.0.0.1 - - [09/Nov/2025 20:03:42] "GET /products HTTP/1.1" 200 -
+2025-11-09 20:03:56,893 INFO 127.0.0.1 - - [09/Nov/2025 20:03:56] "GET /products?q=<script>alert('XSS')</script> HTTP/1.1" 200 -
+2025-11-09 20:10:09,788 INFO 127.0.0.1 - - [09/Nov/2025 20:10:09] "GET /products?q=<script>alert('XSS')</script> HTTP/1.1" 200 -
+2025-11-09 20:13:02,968 INFO 127.0.0.1 - - [09/Nov/2025 20:13:02] "GET /products?q=<script>alert('XSS')</script> HTTP/1.1" 200 -
+2025-11-09 20:13:54,093 INFO 127.0.0.1 - - [09/Nov/2025 20:13:54] "GET /products?q=<script>alert('XSS')</script> HTTP/1.1" 200 -
+2025-11-09 20:14:12,389 INFO 127.0.0.1 - - [09/Nov/2025 20:14:12] "GET /products?q=<script>alert('XSS')</script> HTTP/1.1" 200 -
+2025-11-09 20:16:20,731 INFO 127.0.0.1 - - [09/Nov/2025 20:16:20] "GET /products?q=<script>document.title='XSS-PRESENT'</script> HTTP/1.1" 200 -
+2025-11-09 20:16:20,897 INFO 127.0.0.1 - - [09/Nov/2025 20:16:20] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-11-09 20:16:29,989 INFO 127.0.0.1 - - [09/Nov/2025 20:16:29] "GET /products?q=<script>alert('XSS')</script> HTTP/1.1" 200 -
+2025-11-09 20:16:31,540 INFO 127.0.0.1 - - [09/Nov/2025 20:16:31] "GET /products?q=<script>document.title='XSS-PRESENT'</script> HTTP/1.1" 200 -
+2025-11-09 20:16:34,700 INFO 127.0.0.1 - - [09/Nov/2025 20:16:34] "GET /products?q=<script>document.title='XSS-PRESENT'</script> HTTP/1.1" 200 -
+2025-11-09 20:17:26,553 INFO 127.0.0.1 - - [09/Nov/2025 20:17:26] "GET /products?q=<script>document.title%3D'XSS-PRESENT'</script> HTTP/1.1" 200 -
+2025-11-09 20:17:47,730 INFO 127.0.0.1 - - [09/Nov/2025 20:17:47] "GET /products?q=<img%20src%3Dx%20onerror%3D"alert('XSS')"> HTTP/1.1" 200 -
+2025-11-09 20:17:57,170 INFO 127.0.0.1 - - [09/Nov/2025 20:17:57] "GET /products?q=<script>document.title%3D'XSS-PRESENT'</script> HTTP/1.1" 200 -
+2025-11-09 20:18:26,530 INFO 127.0.0.1 - - [09/Nov/2025 20:18:26] "GET /products?q=<img%20src%3Dx%20onerror%3D"alert('XSS')"> HTTP/1.1" 200 -
+2025-11-09 20:20:43,243 INFO 127.0.0.1 - - [09/Nov/2025 20:20:43] "GET /products?q=<script>document.title%3D'XSS-PRESENT'</script> HTTP/1.1" 200 -
+2025-11-09 20:20:47,881 INFO 127.0.0.1 - - [09/Nov/2025 20:20:47] "GET /products?q=<script>document.title%3D'XSS-PRESENT'</script> HTTP/1.1" 200 -
+2025-11-09 20:21:48,288 INFO 127.0.0.1 - - [09/Nov/2025 20:21:48] "GET /products HTTP/1.1" 200 -
+2025-11-09 20:21:49,146 INFO 127.0.0.1 - - [09/Nov/2025 20:21:49] "GET /product/1 HTTP/1.1" 200 -
+2025-11-09 20:21:49,207 INFO 127.0.0.1 - - [09/Nov/2025 20:21:49] "GET /comments_iframe?product=1 HTTP/1.1" 200 -
+2025-11-09 20:21:53,573 INFO COMMENT_ADDED product=1 len=15
+2025-11-09 20:21:53,576 INFO 127.0.0.1 - - [09/Nov/2025 20:21:53] "[32mPOST /comments_post HTTP/1.1[0m" 302 -
+2025-11-09 20:21:53,584 INFO 127.0.0.1 - - [09/Nov/2025 20:21:53] "GET /comments_iframe?product=1 HTTP/1.1" 200 -
+2025-11-09 20:22:01,419 INFO COMMENT_ADDED product=1 len=15
+2025-11-09 20:22:01,421 INFO 127.0.0.1 - - [09/Nov/2025 20:22:01] "[32mPOST /comments_post HTTP/1.1[0m" 302 -
+2025-11-09 20:22:01,431 INFO 127.0.0.1 - - [09/Nov/2025 20:22:01] "GET /comments_iframe?product=1 HTTP/1.1" 200 -
+2025-11-09 20:28:08,577 INFO DIAG_REQUEST host=127.0.0.1; uname -a
+2025-11-09 20:28:08,582 INFO 127.0.0.1 - - [09/Nov/2025 20:28:08] "GET /diag?host=127.0.0.1;%20uname%20-a HTTP/1.1" 200 -
+2025-11-09 20:28:29,666 INFO 127.0.0.1 - - [09/Nov/2025 20:28:29] "GET /comments_iframe?product=1 HTTP/1.1" 200 -
+2025-11-09 20:28:30,539 INFO 127.0.0.1 - - [09/Nov/2025 20:28:30] "GET /comments_iframe?product=1 HTTP/1.1" 200 -
+2025-11-09 20:28:32,183 INFO 127.0.0.1 - - [09/Nov/2025 20:28:32] "GET /login HTTP/1.1" 200 -
+2025-11-09 20:28:32,783 INFO DIAG_REQUEST host=127.0.0.1
+2025-11-09 20:28:32,800 INFO 127.0.0.1 - - [09/Nov/2025 20:28:32] "GET /diag HTTP/1.1" 200 -
+2025-11-09 20:28:33,818 INFO DIAG_REQUEST host=127.0.0.1
+2025-11-09 20:28:33,829 INFO 127.0.0.1 - - [09/Nov/2025 20:28:33] "GET /diag?host=127.0.0.1 HTTP/1.1" 200 -
+2025-11-09 20:28:34,451 INFO DIAG_REQUEST host=127.0.0.1
+2025-11-09 20:28:34,468 INFO 127.0.0.1 - - [09/Nov/2025 20:28:34] "GET /diag?host=127.0.0.1 HTTP/1.1" 200 -
+2025-11-09 20:28:48,809 INFO DIAG_REQUEST host=127.0.0.1; uname -a
+2025-11-09 20:28:48,812 INFO 127.0.0.1 - - [09/Nov/2025 20:28:48] "GET /diag?host=127.0.0.1;%20uname%20-a HTTP/1.1" 200 -
+2025-11-09 20:29:02,555 INFO DIAG_REQUEST host=127.0.0.1; uname -a
+2025-11-09 20:29:02,559 INFO 127.0.0.1 - - [09/Nov/2025 20:29:02] "GET /diag?host=127.0.0.1;+uname+-a HTTP/1.1" 200 -

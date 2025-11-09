@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+{% block content %}
+  <div class="box">
+    <h2>Diagnostics (ping)</h2>
+    <form method="get">
+      <label>Host/IP: <input name="host" value="{{ request.args.get('host','127.0.0.1') }}" /></label>
+      <button type="submit">Ping</button>
+    </form>
+
+    <h3>Output</h3>
+    <pre style="background:#f9f9f9; padding:1rem; border:1px solid #eee;">{{ output }}</pre>
+  </div>
+{% endblock %}
