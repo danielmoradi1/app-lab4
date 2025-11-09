@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block content %}
+  <div class="box">
+    <h2>Produkt: {{ product['name'] }}</h2>
+    <p>{{ product['description'] }}</p>
+
+    <h3>add comment</h3>
+    <form method="post">
+      <textarea name="comment" rows="4" cols="60"></textarea><br>
+      <button type="submit">Post comment</button>
+    </form>
+
+    <h3>Comments</h3>
+    {% for c in comments %}
+      <div style="border-top:1px dashed #ddd; padding-top:0.5rem;">
+        <div>{{ c['created_at'] }}</div>
+        <div class="danger">{{ c['text']|safe }}</div>
+      </div>
+    {% else %}
+      <p>No comments yet.</p>
+    {% endfor %}
+  </div>
+{% endblock %}

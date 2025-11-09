@@ -1,0 +1,5 @@
+[Command Injection Test]
+URL: /diag?host=127.0.0.1; uname -a
+Effekt: Svar inkluderade output från 'uname -a' (bevis på injektion).
+Bevis: artifacts/cmd_injection_output.html
+Tid: (fyll i datum/tid)

