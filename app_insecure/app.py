@@ -49,7 +49,7 @@ def login():
         password = request.form.get('password','')
         logging.info(f"LOGIN_ATTEMPT username={username}")
 
-        # VULNERABLE: direct string format → SQLi possible
+        # direct string format → SQLi possible
         db = get_db()
         query = f"SELECT * FROM users WHERE username = '{username}' AND password = '{password}';"
         try:
@@ -100,7 +100,6 @@ def diag():
     host = request.args.get('host', '127.0.0.1')
     logging.info(f"DIAG_REQUEST host={host}")
     try:
-        # VULNERABLE: shell=True + concatenation → command injection
         output = subprocess.check_output("ping -c 1 " + host, shell=True, stderr=subprocess.STDOUT, universal_newlines=True, timeout=5)
     except subprocess.CalledProcessError as e:
         output = f"Command failed:\n{e.output}"

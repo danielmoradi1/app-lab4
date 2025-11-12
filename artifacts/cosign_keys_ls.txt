@@ -1,0 +1,2 @@
+-rw------- 1 ramor ramor 649 Nov 12 20:50 keys/cosign.key
+-rw-r--r-- 1 ramor ramor 178 Nov 12 20:50 keys/cosign.pub

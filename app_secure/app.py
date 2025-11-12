@@ -22,11 +22,11 @@ logging.basicConfig(filename=LOGFILE, level=logging.INFO, format='%(asctime)s %(
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'secure-demo-secret'
 
-# Bleach sanitization policy (very permissive example - tighten if needed)
-ALLOWED_TAGS = []    # tom lista = inga HTML-taggar tillåts
+
+ALLOWED_TAGS = []   
 ALLOWED_ATTRS = {}
 
-# ---------------- DB helpers ----------------
+# ------ DB helpers -------
 def get_db():
     if 'db' not in g:
         g.db = sqlite3.connect(DB_PATH)
@@ -42,12 +42,11 @@ def close_db(e=None):
 # ---------------- CSP + nonce ----------------
 @app.after_request
 def set_csp(response):
-    # generera en nonce per response (kan användas i inline-script om absolut nödvändigt)
     nonce = secrets.token_urlsafe(16)
-    # strikt policy: tillåt endast scripts från 'self' och inga inline-scripts
+    # strict policy: allow only scripts from 'self' and no inline scripts
     csp = "default-src 'self'; script-src 'self'; object-src 'none'; frame-ancestors 'none';"
     response.headers['Content-Security-Policy'] = csp
-    # även andra säkerhetsheaders (valfritt men rekommenderat)
+    # also other security headers (optional but recommended)
     response.headers['X-Content-Type-Options'] = 'nosniff'
     response.headers['X-Frame-Options'] = 'DENY'
     response.headers['Referrer-Policy'] = 'no-referrer'
@@ -69,7 +68,7 @@ def login():
         logging.info("LOGIN_ATTEMPT username=%s", username)
 
         db = get_db()
-        # PARAMETRIZED query: skyddar mot SQLi
+        # PARAMETRIZED query
         cur = db.execute("SELECT * FROM users WHERE username = ? AND password = ?", (username, password))
         user = cur.fetchone()
         if user:
@@ -86,7 +85,7 @@ def products():
     q = request.args.get('q','')
     db = get_db()
     rows = db.execute("SELECT id, name, description FROM products").fetchall()
-    # Vi skickar q till template men template kommer escapa värdet (se changes)
+    # We pass q to the template but the template will escape the value
     return render_template('products.html', products=rows, query=q)
 
 # -------- Product + comments (sanera input, iframe) --------
@@ -94,10 +93,9 @@ def products():
 def product(pid):
     db = get_db()
     prod = db.execute("SELECT id, name, description FROM products WHERE id = ?", (pid,)).fetchone()
-    # produkt-sida renderar iframe som laddar kommentarer separat
     return render_template('product.html', product=prod)
 
-# Endpoint som levererar kommentarer (renderas i sandboxad iframe)
+# Endpoint that delivers comments (rendered in a sandboxed iframe)
 @app.route('/comments_iframe')
 def comments_iframe():
     pid = request.args.get('product', '')
@@ -107,25 +105,24 @@ def comments_iframe():
         return "Invalid product", 400
     db = get_db()
     comments = db.execute("SELECT text, created_at FROM comments WHERE product_id = ? ORDER BY created_at DESC", (pid_i,)).fetchall()
-    # comments kommer i template att visas med escaping ({{ c['text']|e }})
     return render_template('comments_iframe.html', comments=comments, product_id=pid_i)
 
 @app.route('/comments_post', methods=['POST'])
 def comments_post():
-    # POST endpoint som tar emot kommentar och sanerar innan lagring
+    # POST endpoint that receives comment and sanitizes before storing
     pid = request.form.get('product_id','')
     comment = request.form.get('comment','')
     try:
         pid_i = int(pid)
     except Exception:
         return "Invalid product", 400
-    # SANERA innan lagring med bleach (ta bort allt HTML här)
+    # SANITIZE before storing with bleach (remove all HTML here)
     clean = bleach.clean(comment, tags=ALLOWED_TAGS, attributes=ALLOWED_ATTRS, strip=True)
     db = get_db()
     db.execute("INSERT INTO comments (product_id, text) VALUES (?, ?)", (pid_i, clean))
     db.commit()
     logging.info("COMMENT_ADDED product=%s len=%d", pid_i, len(clean))
-    # redirect till iframe-sidan så att parent reload inte sker
+    # redirect to iframe page so that parent reload does not happen
     return redirect(url_for('comments_iframe') + f"?product={pid_i}")
 
 # -------- Diagnostics (secure subprocess) --------
@@ -135,12 +132,12 @@ HOST_RE = re.compile(r'^[A-Za-z0-9\.\-]+$')  # allowlist: letters, numbers, dot 
 def diag():
     host = request.args.get('host', '127.0.0.1').strip()
     logging.info("DIAG_REQUEST host=%s", host)
-    # Validera input strikt
+    # Strictly validate input
     if not HOST_RE.match(host):
         output = "Invalid host"
         return render_template('diag.html', host=host, output=output)
     try:
-        # säker subprocess: lista-format, ingen shell=True
+        # secure subprocess: list format, no shell=True
         completed = subprocess.run(['ping', '-c', '1', host], stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True, timeout=5)
         output = completed.stdout
     except Exception as e:

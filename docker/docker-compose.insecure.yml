@@ -1,0 +1,15 @@
+services:
+  insecure:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile.insecure
+    image: app-lab4:insecure
+    ports:
+      - "127.0.0.1:5000:5000"
+    volumes:
+      - ../logs:/app/logs
+    networks: [internal_net]
+
+networks:
+  internal_net:
+    internal: true

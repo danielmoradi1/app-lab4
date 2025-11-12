@@ -1,0 +1,8 @@
+services:
+  secure:
+    user: "${UID}:${GID}"
+    image: app-lab4:secure
+    ports:
+      - "127.0.0.1:5001:5001"
+    volumes:
+      - ../logs:/app/logs
